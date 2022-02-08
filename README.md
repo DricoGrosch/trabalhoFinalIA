@@ -20,8 +20,11 @@
 <p>
 O dataset utilizado para o presente classificador é uma cópia dos conjuntos de dados UCI ML Breast Cancer Wisconsin (Diagnostic) disponível em: <a href="https://goo.gl/U2Uwz2">https://goo.gl/U2Uwz2</a>.
 
-As características são computadas através de uma imagem digitalizada da massa do nódulo adquirida através de uma agulha extremamente fina.
+As características são computadas através da imagem digitalizada da massa do nódulo adquirida através de uma agulha
+extremamente fina e representam as características dos núcleos celulares presentes na imagem.
 </p>
+<img width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKoSZCrZOrRK-vdGQn_iZkWTdoSeQqCNE1eOF6VCXtNt-9Q-l3l4YUSNT93Aal7DdE0E&usqp=CAU">
+<img width="300" src="https://d3i71xaburhd42.cloudfront.net/50537a16eb18e2bc4971165258cba7a071f38cb7/2-Figure1-1.png">
 
 <table>
 <tr>
@@ -47,10 +50,13 @@ As características são computadas através de uma imagem digitalizada da massa
 </td></tr>
 <tr>
 <td colspan="100%">
-A média, o erro padrão e o “pior” ou maior (média dos três piores / maiores valores) desses recursos foram calculados para cada imagem, resultando em 30 recursos. Por exemplo, o campo 0 é o raio médio, o campo 10 é o raio SE, o campo 20 é o pior raio.
+Cada característica avaliada foi separada em 3 conjuntos. Média, desvio padrão e pior. Por exemplo, se pegarmos o "Raio" são avaliados os núcloes presentes na imagem capturada para um determinado nódulo, sendo separada uma média dos raios, o desvio padrão do raio e o pior raio.  
 </td>
+</tr>
+<tr>
 </tr>
 </table>
 
 ## Técnica
+
 <p>Para desenvolver o trabalho, foi utilizada a biblioteca Scikit Learn, que é uma biblioteca de machine learning presente na linguagem Python. A biblioteca foi utilizada pois já fornece nativamente uma grande quantia de datasets prontos para uso e também um módulo que nos permite aplicar a téncica da Árvore de Decisão, um dos métodos mais comuns dentro da aprendizagem de máquina, para realizar a classificação desejada.
