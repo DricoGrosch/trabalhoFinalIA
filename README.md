@@ -63,16 +63,25 @@ Cada característica avaliada foi separada em 3 conjuntos. Média, desvio padrã
 <p>Para desenvolver o trabalho, foi utilizada a biblioteca Scikit Learn, que é uma biblioteca de machine learning presente na linguagem Python. A biblioteca foi utilizada pois já fornece nativamente uma grande quantia de datasets prontos para uso e também um módulo que nos permite aplicar a téncica da Árvore de Decisão, um dos métodos mais comuns dentro da aprendizagem de máquina, para realizar a classificação desejada.</p>
 <p>
 
-As entradas da árvore de decisão são os valores correspondentes às características retiradas dos núcleos celulares das massas dos nódulos das amostras, como por exemplo (Raio, perímetro, textura,etc), 
+As entradas da árvore de decisão são os valores correspondentes às características retiradas dos núcleos celulares das massas dos nódulos das amostras, como por exemplo (Raio, perímetro, textura,etc), <br>
 ![img_1.png](img_1.png)
 
-
+<br>
 Com os valores destas características(entradas) a árvore realiza o processo de treinamento.
-Para o treinamento, foram utilizados os seguintes parâmetros: Profundidade da árvore, tamanho dos dados teste e o critério para realizar a divisão ótima das carecterísticas
-<li>Profundidade da árvore: 77.4</li>
-<li>Tamanho dos dados de teste: 0.14</li>
-<li>Crtitério de divisão: Entropia</li>
+Para o treinamento, foram utilizados os seguintes parâmetros: Profundidade da árvore, tamanho dos dados teste e o critério para realizar a divisão ótima das carecterísticas, após esse treino, a arvore consegue indentificar as importâncias de cada caracteristica do cancer, e com isso consegue definir a melhor maneira de analisar cada amostra do dataset. O resultado possível (saída) para cada amostra é apenas um, a situação do câncer definida de forma binária [ 0  | Benigno] ou [ 1 | maligno].
+  
+ **Técnica de Avaliação do Modelo**<br/>
+  Foi utilizada a técnica de validação cruzada k-fold, para avaliar a precisão do modelo na pratica, ou seja seu desempenho para um novo conjunto de dados<br/>
+  
+  
+ **Métricas de Avaliação<br/>
+  Para realizar a avaliação do modelo, utilizamos uma matriz de confusão,
+  <br>
+  ![image](https://user-images.githubusercontent.com/54003782/153778306-39b3a1f3-b50b-4209-84ac-e80fb6fd9364.png)
 
+  <br>
+  Juntamente com a acurácia, precisão, recall e f1-score
+  <img src="https://miro.medium.com/max/1400/1*t1vf-ofJrJqtmam0KSn3EQ.png"/>
 
 
 
