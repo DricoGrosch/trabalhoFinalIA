@@ -84,8 +84,33 @@ Para o treinamento, foram utilizados os seguintes parâmetros: Profundidade da �
   <img src="https://miro.medium.com/max/1400/1*t1vf-ofJrJqtmam0KSn3EQ.png"/>
 
 
-
+<br>
 ## Resultados Obtidos
+   <br>
+   O experimento foi realizado utilizando diferente combinações de parametros, afim de obter o melhor resultado (sáida) possivel 
+  <br>
+  Foram realizados 200 testes (arquivo check_parameters.py) alteranando o critério entre "Entropy" e "GINI", profundidade entre 1 e 100, tamanho do teste entre 0.1 e 0.9
+  <br>
+  Com isso conseguimos os seguintes valores, pois os mesmos resultam no melhor f1-score, que é a média harmonica entre a precisão e o recall
+  <br>
+  **Precisão**
+   <br>
+    Dentre todas as classificações de classe Positivo que o modelo fez, quantas estão corretas;
+  <br>
+  **Recall(Sensibilidade)**
+   <br>
+   Dentre todas as situações de classe Positivo como valor esperado, quantas estão corretas;
+  <br>
+
+  **Valores**
+   <br>
+  <li>Profundidade da árvore: 77.4</li> <br>
+  <li>Tamanho dos dados de teste: 0.14</li> <br>
+  <li>Crtitério de divisão: Entropia</li> <br>
+  
+  <br>
+  
+  
 ## Instruções de uso do software
 ## Vídeo
 
