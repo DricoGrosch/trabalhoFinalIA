@@ -105,19 +105,29 @@ Dentre todas as situações de classe Positivo como valor esperado, quantas est�
   <li>Crtitério de divisão: Entropia</li> 
   <br>
 
+
+### Matriz de Confusao
+Calcula a quantidade de casos em que o modelo realmente acertou o resultado a partir de resultado já esperado.
 ![](confusion_matrix.png)
+Analisando a matriz constata-se que o modelo acertou 74 vezes comparando com o resultado esperado, e errou 6 vezes
 
+### Feature Importance (Importância das Características)
 ![](feature_importance.png)
+A partir dos treinamentos o modelo considerou por exemplo "Pior Raio" como a característica mais importante
 
-![](tree.png)
+
 
 ![img_2.png](img_2.png)
 
+
+
+### Representação da Árvore de Decisão
+ A representação da árvore de decisão nessa imagem abaixo, não está totalmente completa, pois pelos limites da bilbioteca de plotagem grafica
+![](tree.png)
+Para sanar esse problema, as imagens abaixo mostram a árvore completa em formato de texto
 ![img_3.png](img_3.png)
 
 ![img_4.png](img_4.png)
-
-
 
 
 
