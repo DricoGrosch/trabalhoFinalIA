@@ -76,9 +76,11 @@ Para o treinamento, foram utilizados os seguintes parâmetros: Profundidade da �
 
 
 
+## Resultados Obtidos
+## Instruções de uso do software
+## Vídeo
 
 
 
-Foi selecionado um data set do site fdp, e partir desses dados que em um mundo conseguem retornar como resposta se uma pessoa teve cancer, ou não, com isso foi pensado no desenvolvimento de uma arvore de decisao
 
-</p>
+
