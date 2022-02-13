@@ -2,7 +2,8 @@ import pandas
 import seaborn as seaborn
 from matplotlib import pyplot
 from sklearn import tree
-from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score
+from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score, f1_score, \
+    ConfusionMatrixDisplay
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.tree import DecisionTreeClassifier
 
@@ -39,8 +40,7 @@ class DecisionTree(DecisionTreeClassifier):
         # random state é a aleatoriedade na divisão. serve pra não ficar um conjunto com com maligno e outro só com benigno, por exemplo
         self.train_features, self.test_features, self.target_train, self.target_test = train_test_split(feature_data,
                                                                                                         target,
-                                                                                                        test_size=0.3,
-                                                                                                        random_state=43)
+                                                                                                        test_size=0.5)
         print(f'Train shape: {self.train_features.shape}')
         print(f'Test shape: {self.test_features.shape}')
         self.fit(self.train_features, self.target_train)
@@ -53,13 +53,21 @@ class DecisionTree(DecisionTreeClassifier):
         return self.predict(self.test_features)
 
     def get_confusion_matrix(self):
+        self.plot_confusion_matrix()
         return confusion_matrix(self.target_test, self.get_predictions(), labels=[0, 1])
+
+    def plot_confusion_matrix(self):
+        ConfusionMatrixDisplay.from_predictions(self.target_test, self.get_predictions(),  display_labels=self.dataset.target_names,)
+        pyplot.savefig('confusion_matrix.png')
 
     def get_accuracy_score(self):
         return accuracy_score(self.target_test, self.get_predictions())
 
     def get_precision_score(self):
         return precision_score(self.target_test, self.get_predictions())
+
+    def get_f1_score(self):
+        return f1_score(self.target_test, self.get_predictions())
 
     def get_recall_score(self):
         # O recall é a fração de casos raros corretamente previstos pelo modelo, em relação ao número
@@ -82,6 +90,7 @@ class DecisionTree(DecisionTreeClassifier):
                        filled=True,
                        fontsize=8)
         pyplot.savefig('tree.png')
+
     def cross_validate(self):
         # cv é o iterador, como se fosse o I do for. nesse caso vai executar 10 vezes e calcular a acuracia de cada uma
-        return cross_val_score(self, self.dataset.data, self.dataset.target, cv=5,scoring='accuracy'),
+        return cross_val_score(self, self.dataset.data, self.dataset.target, cv=10, scoring='accuracy'),
