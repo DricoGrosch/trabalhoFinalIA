@@ -12,9 +12,37 @@ class DecisionTree(DecisionTreeClassifier):
     dataset = None
     dataframe = None
 
-    def set_dataset(self, dataset):
+    def __init__(self,
+                 *,
+                 criterion="gini",
+                 splitter="best",
+                 max_depth=None,
+                 min_samples_split=2,
+                 min_samples_leaf=1,
+                 min_weight_fraction_leaf=0.0,
+                 max_features=None,
+                 random_state=None,
+                 max_leaf_nodes=None,
+                 min_impurity_decrease=0.0,
+                 class_weight=None,
+                 ccp_alpha=0.0, dataset, test_size):
         self.dataset = dataset
         self.build_dataframe()
+        self.test_size=test_size
+        super(DecisionTree, self).__init__(
+            criterion=criterion,
+            splitter=splitter,
+            max_depth=max_depth,
+            min_samples_split=min_samples_split,
+            min_samples_leaf=min_samples_leaf,
+            min_weight_fraction_leaf=min_weight_fraction_leaf,
+            max_features=max_features,
+            random_state=random_state,
+            max_leaf_nodes=max_leaf_nodes,
+            min_impurity_decrease=min_impurity_decrease,
+            class_weight=class_weight,
+            ccp_alpha=ccp_alpha)
+
 
     def export_dataframe(self):
         self.dataframe.to_excel("output.xlsx")
@@ -40,7 +68,7 @@ class DecisionTree(DecisionTreeClassifier):
         # random state é a aleatoriedade na divisão. serve pra não ficar um conjunto com com maligno e outro só com benigno, por exemplo
         self.train_features, self.test_features, self.target_train, self.target_test = train_test_split(feature_data,
                                                                                                         target,
-                                                                                                        test_size=0.5)
+                                                                                                        test_size=self.test_size)
         print(f'Train shape: {self.train_features.shape}')
         print(f'Test shape: {self.test_features.shape}')
         self.fit(self.train_features, self.target_train)
@@ -57,7 +85,8 @@ class DecisionTree(DecisionTreeClassifier):
         return confusion_matrix(self.target_test, self.get_predictions(), labels=[0, 1])
 
     def plot_confusion_matrix(self):
-        ConfusionMatrixDisplay.from_predictions(self.target_test, self.get_predictions(),  display_labels=self.dataset.target_names,)
+        ConfusionMatrixDisplay.from_predictions(self.target_test, self.get_predictions(),
+                                                display_labels=self.dataset.target_names, )
         pyplot.savefig('confusion_matrix.png')
 
     def get_accuracy_score(self):

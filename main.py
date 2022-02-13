@@ -4,8 +4,7 @@ from sklearn.tree import export_text
 
 from decision_tree import DecisionTree
 
-decision_tree = DecisionTree(criterion='entropy',max_depth=15)
-decision_tree.set_dataset(load_breast_cancer())
+decision_tree = DecisionTree(criterion='entropy', max_depth=77.4, dataset=load_breast_cancer(), test_size=0.14)
 print(f'Features: {decision_tree.get_features()}')
 print(f'Target Names: {decision_tree.get_target_names()}')
 decision_tree.export_dataframe()
@@ -23,8 +22,7 @@ print(f'scores: {scores}')
 print(f"Cross validation Score Mean: {mean((scores))}")
 print(f"Cross validation standart deviation: {std(scores)}")
 
-
 print(decision_tree.get_feature_importance())
 decision_tree.plot_feature_importance(decision_tree.get_feature_importance(), 'bar')
 decision_tree.plot_decision_tree()
-print(export_text(decision_tree,feature_names=decision_tree.dataset.feature_names.tolist()))
+print(export_text(decision_tree, feature_names=decision_tree.dataset.feature_names.tolist()))
