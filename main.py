@@ -18,10 +18,9 @@ print(f'F1 Score: {decision_tree.get_f1_score()}')
 print(f'Confusion Matrix: {decision_tree.get_confusion_matrix()}')
 
 scores = decision_tree.cross_validate()
-print(f'scores: {scores}')
+print(f"scores: {scores}")
 print(f"Cross validation Score Mean: {mean((scores))}")
 print(f"Cross validation standart deviation: {std(scores)}")
-
 print(decision_tree.get_feature_importance())
 decision_tree.plot_feature_importance(decision_tree.get_feature_importance(), 'bar')
 decision_tree.plot_decision_tree()
