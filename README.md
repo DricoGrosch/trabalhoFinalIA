@@ -86,6 +86,7 @@ Para realizar a avaliação do modelo, utilizamos uma matriz de confusão,
   <img src="https://miro.medium.com/max/1400/1*t1vf-ofJrJqtmam0KSn3EQ.png"/>
 
 ## Resultados obtidos
+
 <p>O experimento foi realizado utilizando diferente combinações de parametros, afim de obter o melhor resultado (sáida) possivel</p> 
 <p>  Foram realizados 200 testes (arquivo check_parameters.py) alteranando o critério entre "Entropy" e "GINI", profundidade entre 1 e 100, tamanho do teste entre 0.1 e 0.9</p>
 <p>  Com isso conseguimos os seguintes valores, pois os mesmos resultam no melhor f1-score, que é a média harmonica entre a precisão e o recall</p>
@@ -117,13 +118,31 @@ Dentre todas as situações de classe Positivo como valor esperado, quantas est�
 
 ![img_4.png](img_4.png)
 
-
-
-
-
-
-
 ## Instruções de uso do software
+
+A implementação foi feita através da Linguagem Python, utilizando a biblioteca Scikit Learn. Para executar a
+implementação, siga o passo a passo a seguir:
+
+### Instale o Python
+
+<li>Acesse o link: <a href="https://www.python.org/">https://www.python.org/</a>. Baixe e instale o Python</li>
+<li>Caso ache necessário abrir o projeto em uma IDE, recomenda-se o Pycharm: <a href="https://www.jetbrains.com/pt-br/pycharm/download/#section=windows">https://www.jetbrains.com/pt-br/pycharm/download/#section=windows</a></li>
+<li>Abra o caminho do projeto no terminal</li>
+<li>Instale as dependências do projeto: pip install -r requirements.txt</li>
+
+![img_9.png](img_9.png)
+
+<li>Execute o arquivo main.py rodando o comando <b>python main.py</b> no terminal</li>
+
+![img_7.png](img_7.png)
+
+<li>Caso tenha aberto o projeto no pycharm, basta utilizar o terminal do pycharm. Ou abra o arquivo main.py, clique com o botão direito e clique em <b>run main.py</b></li>
+
+![img_6.png](img_6.png)
+
+![img_8.png](img_8.png)
+
+O programa exportará os gráficos na mesma pasta em que o arquivo main.py se encontra e imprimirá no console todas as saídas.
 
 ## Vídeo
 

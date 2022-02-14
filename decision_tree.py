@@ -1,5 +1,4 @@
 import pandas
-import seaborn as seaborn
 from matplotlib import pyplot
 from sklearn import tree
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score, f1_score, \
