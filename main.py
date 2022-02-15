@@ -4,7 +4,7 @@ from sklearn.tree import export_text
 
 from decision_tree import DecisionTree
 
-decision_tree = DecisionTree(criterion='entropy', max_depth=7, dataset=load_breast_cancer(), test_size=0.3)
+decision_tree = DecisionTree(criterion='entropy', max_depth=3, dataset=load_breast_cancer(), test_size=0.1)
 print(f'Features: {decision_tree.get_features()}')
 print(f'Target Names: {decision_tree.get_target_names()}')
 decision_tree.export_dataframe()

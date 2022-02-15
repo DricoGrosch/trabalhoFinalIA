@@ -24,6 +24,7 @@ As características são computadas através da imagem digitalizada da massa do 
 extremamente fina e representam as características dos núcleos celulares presentes na imagem.
 </p>
 <img width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKoSZCrZOrRK-vdGQn_iZkWTdoSeQqCNE1eOF6VCXtNt-9Q-l3l4YUSNT93Aal7DdE0E&usqp=CAU">
+
 <img width="300" src="https://d3i71xaburhd42.cloudfront.net/50537a16eb18e2bc4971165258cba7a071f38cb7/2-Figure1-1.png">
 
 Estas características foram levantadas juntamente com médicos da área que até então consideraram as mesmas como
@@ -99,31 +100,42 @@ Dentre todas as classificações de classe Positivo que o modelo fez, quantas es
 
 Dentre todas as situações de classe Positivo como valor esperado, quantas estão corretas;
 
-### Valores
+### Parâmetros
 
-  <li>Profundidade da árvore: 77.4</li> 
-  <li>Tamanho dos dados de teste: 0.14</li> 
+  <li>Profundidade da árvore: 3</li> 
+  <li>Tamanho dos dados de teste: 0.1</li> 
   <li>Crtitério de divisão: Entropia</li> 
-  <br>
 
+Para os parâmetros acima, foram obtidos os seguintes resultados:
+
+#### Precisão: 0.98
+
+#### Recall: 1.0
+
+#### Acurácia 0.98
+
+#### F-1 score: 0.99
 
 ### Matriz de Confusao
+
 Calcula a quantidade de casos em que o modelo realmente acertou o resultado a partir de resultado já esperado.
+
 ![](confusion_matrix.png)
-Analisando a matriz constata-se que o modelo acertou 74 vezes comparando com o resultado esperado, e errou 6 vezes
 
-### Feature Importance (Importância das Características)
+Analisando a matriz constata-se que o modelo acertou 56 vezes comparando com o resultado esperado, e errou 1 vezes
+
+### Importância das Características
+
 ![](feature_importance.png)
+
 A partir dos treinamentos o modelo considerou por exemplo "Pior Raio" como a característica mais importante
-
-
 
 ![img_2.png](img_2.png)
 
-
-
 ### Representação da Árvore de Decisão
- A representação da árvore de decisão nessa imagem abaixo, não está totalmente completa, pois pelos limites da bilbioteca de plotagem grafica
+
+A representação da árvore de decisão nessa imagem abaixo, não está totalmente completa, pois pelos limites da bilbioteca
+de plotagem grafica
 ![](tree.png)
 Para sanar esse problema, as imagens abaixo mostram a árvore completa em formato de texto
 ![img_3.png](img_3.png)
@@ -160,7 +172,8 @@ implementação, siga o passo a passo a seguir:
 
 ![img_8.png](img_8.png)
 
-O programa exportará os gráficos na mesma pasta em que o arquivo main.py se encontra e imprimirá no console todas as saídas.
+O programa exportará os gráficos na mesma pasta em que o arquivo main.py se encontra e imprimirá no console todas as
+saídas.
 
 ## Vídeo
 
