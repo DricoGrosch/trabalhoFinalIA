@@ -144,6 +144,12 @@ implementação, siga o passo a passo a seguir:
 
 ![img_9.png](img_9.png)
 
+<li>Caso obtenha este erro</li>
+
+![img_10.png](img_10.png)
+
+<li>Instale as dependências através do comando <b>pip install -r requirements.txt --user</b></li>
+
 <li>Execute o arquivo main.py rodando o comando <b>python main.py</b> no terminal</li>
 
 ![img_7.png](img_7.png)

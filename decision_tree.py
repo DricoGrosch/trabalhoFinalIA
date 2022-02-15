@@ -27,7 +27,7 @@ class DecisionTree(DecisionTreeClassifier):
                  ccp_alpha=0.0, dataset, test_size):
         self.dataset = dataset
         self.build_dataframe()
-        self.test_size=test_size
+        self.test_size = test_size
         super(DecisionTree, self).__init__(
             criterion=criterion,
             splitter=splitter,
@@ -41,7 +41,6 @@ class DecisionTree(DecisionTreeClassifier):
             min_impurity_decrease=min_impurity_decrease,
             class_weight=class_weight,
             ccp_alpha=ccp_alpha)
-
 
     def export_dataframe(self):
         self.dataframe.to_excel("output.xlsx")
@@ -67,7 +66,8 @@ class DecisionTree(DecisionTreeClassifier):
         # random state é a aleatoriedade na divisão. serve pra não ficar um conjunto com com maligno e outro só com benigno, por exemplo
         self.train_features, self.test_features, self.target_train, self.target_test = train_test_split(feature_data,
                                                                                                         target,
-                                                                                                        test_size=self.test_size)
+                                                                                                        test_size=self.test_size,
+                                                                                                        shuffle=False)
         print(f'Train shape: {self.train_features.shape}')
         print(f'Test shape: {self.test_features.shape}')
         self.fit(self.train_features, self.target_train)
