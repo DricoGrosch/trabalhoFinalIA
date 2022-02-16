@@ -23,9 +23,10 @@ O dataset utilizado para o presente classificador é uma cópia dos conjuntos de
 As características são computadas através da imagem digitalizada da massa do nódulo adquirida através de uma agulha
 extremamente fina e representam as características dos núcleos celulares presentes na imagem.
 </p>
-<img width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKoSZCrZOrRK-vdGQn_iZkWTdoSeQqCNE1eOF6VCXtNt-9Q-l3l4YUSNT93Aal7DdE0E&usqp=CAU">
 
-<img width="300" src="https://d3i71xaburhd42.cloudfront.net/50537a16eb18e2bc4971165258cba7a071f38cb7/2-Figure1-1.png">
+![](imagem_nodulo_1.png)
+
+![](imagem_nodulo_2.png)
 
 Estas características foram levantadas juntamente com médicos da área que até então consideraram as mesmas como
 relevantes durante a análise de um câncer de mama
@@ -77,7 +78,8 @@ Para o treinamento, foram utilizados os seguintes parâmetros: Profundidade da �
 Foi utilizada a técnica de validação cruzada k-fold, para avaliar a precisão do modelo na pratica, ou seja seu
 desempenho para um novo conjunto de dados<br/>
 
-**Métricas de Avaliação<br/>
+## Métricas de Avaliação
+
 Para realizar a avaliação do modelo, utilizamos uma matriz de confusão,
 <br>
 ![image](https://user-images.githubusercontent.com/54003782/153778306-39b3a1f3-b50b-4209-84ac-e80fb6fd9364.png)
@@ -92,19 +94,51 @@ Para realizar a avaliação do modelo, utilizamos uma matriz de confusão,
 <p>  Foram realizados 200 testes (arquivo check_parameters.py) alteranando o critério entre "Entropy" e "GINI", profundidade entre 1 e 100, tamanho do teste entre 0.1 e 0.9</p>
 <p>  Com isso conseguimos os seguintes valores, pois os mesmos resultam no melhor f1-score, que é a média harmonica entre a precisão e o recall</p>
 
-### Recall(Sensibilidade)
+#### Recall(Sensibilidade)
 
 Dentre todas as classificações de classe Positivo que o modelo fez, quantas estão corretas;
 
-### Recall(Sensibilidade)
+#### Recall(Sensibilidade)
 
 Dentre todas as situações de classe Positivo como valor esperado, quantas estão corretas;
+
+#### Gini
+
+A impureza de gini é calculada através da fórmula:
+
+![img_11.png](img_11.png)
+
+Onde Pj é a probabilidade da classe j.
+
+A impureza Gini mede a frequência com que qualquer elemento do conjunto de dados será rotulado incorretamente quando for
+rotulado aleatoriamente. O valor mínimo do Índice de Gini é 0. Isso acontece quando o nó é puro , isso significa que
+todos os elementos contidos no nó são de uma única classe.
+
+#### Entropia
+
+A entropia é calculada usando a seguinte fórmula:
+
+![img_12.png](img_12.png)
+
+Onde, como antes,Pj é a probabilidade da classe j. A entropia é uma medida de informação que indica a desordem das
+feições com o alvo. Semelhante ao Índice de Gini, a divisão ótima é escolhida pelo recurso com menor entropia
+
+### Gini vs Entropia
+
+O Índice de Gini tem valores dentro do intervalo [0, 0,5] enquanto que o intervalo da Entropia é [0, 1]. Na figura a
+seguir, ambos estão representados
+
+![img_14.png](img_14.png)
+
+Computacionalmente, a entropia é mais complexa, pois faz uso de logaritmos e, consequentemente, o cálculo do Índice de
+Gini será mais rápido.
 
 ### Parâmetros
 
   <li>Profundidade da árvore: 3</li> 
   <li>Tamanho dos dados de teste: 0.1</li> 
   <li>Crtitério de divisão: Entropia</li> 
+
 
 Para os parâmetros acima, foram obtidos os seguintes resultados:
 
