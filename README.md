@@ -313,7 +313,7 @@ https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magics-explai
 https://pandas.pydata.org/docs/reference/index.html
 https://scikit-learn.org/stable/datasets/toy_dataset.html#breast-cancer-dataset
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_spli
-https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html
