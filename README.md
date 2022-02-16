@@ -234,6 +234,7 @@ demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
 </table>
 
     Selecionamos os melhores parametros através de uma análise feita a partir do conjunto dos valores resultades de
+
 Acurácia, Precisão, Recall e F-1 Score de todos os parâmetros informados. Para os parâmetros acima, foram obtidos os
 seguintes resultados:
 
@@ -268,7 +269,6 @@ A partir dos treinamentos o modelo considerou por exemplo "Pior Raio" como a car
 Segue abaixo a árvore plotada em formato de texto:
 
 ![img_16.png](img_16.png)
-
 
 ## Instruções de uso do software
 
@@ -305,7 +305,20 @@ saídas.
 
 ## Vídeo
 
+## References
 
-
-
-
+https://numpy.org/doc/1.18/reference/index.html
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot
+https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magics-explained
+https://pandas.pydata.org/docs/reference/index.html
+https://scikit-learn.org/stable/datasets/toy_dataset.html#breast-cancer-dataset
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_spli
+https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html
+https://mathworld.wolfram.com/HarmonicMean.html
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
+https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html
+https://scikit-learn.org/stable/modules/cross_validation.html
