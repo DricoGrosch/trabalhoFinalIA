@@ -63,7 +63,7 @@ Cada característica avaliada foi separada em 3 conjuntos. Média, desvio padrã
 
 ## Técnica
 
-<p>Para desenvolver o trabalho, foi utilizada a biblioteca Scikit Learn, que é uma biblioteca de machine learning presente na linguagem Python. A biblioteca foi utilizada pois já fornece nativamente uma grande quantia de datasets prontos para uso e também um módulo que nos permite aplicar a téncica da Árvore de Decisão, um dos métodos mais comuns dentro da aprendizagem de máquina, para realizar a classificação desejada.</p>
+<p>Para desenvolver o trabalho, foi utilizada a biblioteca Scikit Learn, que é uma biblioteca de machine learning presente na linguagem Python. A biblioteca foi utilizada pois já fornece nativamente uma grande quantia de datasets prontos para uso e também um módulo que nos permite aplicar a técnica da Árvore de Decisão, um dos métodos mais comuns dentro da aprendizagem de máquina, para realizar a classificação desejada.</p>
 <p>
 
 As entradas da árvore de decisão são os valores correspondentes às características retiradas dos núcleos celulares das
@@ -139,8 +139,103 @@ Gini será mais rápido.
   <li>Tamanho dos dados de teste: 0.1</li> 
   <li>Crtitério de divisão: Entropia</li> 
 
+Chegamos nesses valores de parametros atráves de diversos testes realizados na classe calc_parameters.py. Para
+demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
+<table>
+<tr>
+<td colspan="100%" style="text-align: center">Melhores parâmetros</td>
+</tr>
+<tr>
+<td>Profundidade da Árvore</td>
+<td>Tamanho dos dados de Teste</td>
+<td>Crtitério de divisão</td>
+<td>Acurácia</td>
+<td>Precisão</td>
+<td>Recall</td>
+<td>F1-Score</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.1</td>
+<td>Entropia</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>1</td>
+<td>0.99</td>
+</tr>
+</table>
+<table>
+<td colspan="100%" style="text-align: center">Melhores parâmetros, porém com o critério de divisão alterado para Gini, a fim de descobrir o melhor critério para nosso modelo</td>
 
-Para os parâmetros acima, foram obtidos os seguintes resultados:
+<tr>
+<td>Profundidade da Árvore</td>
+<td>Tamanho dos dados de Teste</td>
+<td>Crtitério de divisão</td>
+<td>Acurácia</td>
+<td>Precisão</td>
+<td>Recall</td>
+<td>F1-Score</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.1</td>
+<td>Gini</td>
+<td>0.93</td>
+<td>0.95</td>
+<td>0.95</td>
+<td>0.95</td>
+
+
+</tr>
+</table>
+<table>
+<td colspan="100%" style="text-align: center">Teste com valores aleatórios</td>
+<tr>
+<td>Profundidade da Árvore</td>
+<td>Tamanho dos dados de Teste</td>
+<td>Crtitério de divisão</td>
+<td>Acurácia</td>
+<td>Precisão</td>
+<td>Recall</td>
+<td>F1-Score</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.5</td>
+<td>Entropia</td>
+<td>0.90</td>
+<td>0.98</td>
+<td>0.86</td>
+<td>0.92</td>
+
+
+</tr>
+</table>
+<table>
+<td colspan="100%" style="text-align: center">Teste com valores aleatórios</td>
+<tr>
+<td>Profundidade da Árvore</td>
+<td>Tamanho dos dados de Teste</td>
+<td>Crtitério de divisão</td>
+<td>Acurácia</td>
+<td>Precisão</td>
+<td>Recall</td>
+<td>F1-Score</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0.9</td>
+<td>Entropia</td>
+<td>0.86</td>
+<td>0.99</td>
+<td>0.80</td>
+<td>0.88</td>
+</tr>
+</table>
+
+    Selecionamos os melhores parametros através de uma análise feita a partir do conjunto dos valores resultades de
+Acurácia, Precisão, Recall e F-1 Score de todos os parâmetros informados. Para os parâmetros acima, foram obtidos os
+seguintes resultados:
 
 #### Precisão: 0.98
 
@@ -164,17 +259,16 @@ Analisando a matriz constata-se que o modelo acertou 56 vezes comparando com o r
 
 A partir dos treinamentos o modelo considerou por exemplo "Pior Raio" como a característica mais importante
 
-![img_2.png](img_2.png)
+![img_15.png](img_15.png)
 
 ### Representação da Árvore de Decisão
 
-A representação da árvore de decisão nessa imagem abaixo, não está totalmente completa, pois pelos limites da bilbioteca
-de plotagem grafica
 ![](tree.png)
-Para sanar esse problema, as imagens abaixo mostram a árvore completa em formato de texto
-![img_3.png](img_3.png)
 
-![img_4.png](img_4.png)
+Segue abaixo a árvore plotada em formato de texto:
+
+![img_16.png](img_16.png)
+
 
 ## Instruções de uso do software
 
