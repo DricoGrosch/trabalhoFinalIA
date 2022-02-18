@@ -2,7 +2,7 @@ import pandas
 from matplotlib import pyplot
 from sklearn import tree
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score, f1_score, \
-    ConfusionMatrixDisplay
+    ConfusionMatrixDisplay, classification_report
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.tree import DecisionTreeClassifier
 

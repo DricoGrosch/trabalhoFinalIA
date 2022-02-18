@@ -137,7 +137,7 @@ Gini será mais rápido.
 
   <li>Profundidade da árvore: 3</li> 
   <li>Tamanho dos dados de teste: 0.1</li> 
-  <li>Crtitério de divisão: Entropia</li> 
+  <li>Critério de divisão: Entropia</li> 
 
 Chegamos nesses valores de parametros atráves de diversos testes realizados na classe calc_parameters.py. Para
 demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
@@ -148,7 +148,7 @@ demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
 <tr>
 <td>Profundidade da Árvore</td>
 <td>Tamanho dos dados de Teste</td>
-<td>Crtitério de divisão</td>
+<td>Critério de divisão</td>
 <td>Acurácia</td>
 <td>Precisão</td>
 <td>Recall</td>
@@ -170,7 +170,7 @@ demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
 <tr>
 <td>Profundidade da Árvore</td>
 <td>Tamanho dos dados de Teste</td>
-<td>Crtitério de divisão</td>
+<td>Critério de divisão</td>
 <td>Acurácia</td>
 <td>Precisão</td>
 <td>Recall</td>
@@ -193,7 +193,7 @@ demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
 <tr>
 <td>Profundidade da Árvore</td>
 <td>Tamanho dos dados de Teste</td>
-<td>Crtitério de divisão</td>
+<td>Critério de divisão</td>
 <td>Acurácia</td>
 <td>Precisão</td>
 <td>Recall</td>
@@ -216,7 +216,7 @@ demonstrar alguns destes testes realizados, selecionamos 4 exemplos:
 <tr>
 <td>Profundidade da Árvore</td>
 <td>Tamanho dos dados de Teste</td>
-<td>Crtitério de divisão</td>
+<td>Critério de divisão</td>
 <td>Acurácia</td>
 <td>Precisão</td>
 <td>Recall</td>
@@ -304,7 +304,7 @@ O programa exportará os gráficos na mesma pasta em que o arquivo main.py se en
 saídas.
 
 ## Vídeo
-
+https://www.youtube.com/watch?v=pacAVBTdlZk
 ## References
 
 https://numpy.org/doc/1.18/reference/index.html
