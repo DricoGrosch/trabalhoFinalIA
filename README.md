@@ -305,7 +305,7 @@ saídas.
 
 ## Vídeo
 https://www.youtube.com/watch?v=pacAVBTdlZk
-## References
+## Referências
 
 https://numpy.org/doc/1.18/reference/index.html
 https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot
